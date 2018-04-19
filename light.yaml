@@ -1,0 +1,34 @@
+# luz cozinha
+  - platform: mqtt
+    name: "Luz da pia"
+    state_topic: 'casa/cozinha/luz_pia/status'
+    command_topic: 'casa/cozinha/luz_pia/switch'
+    optimistic: false
+
+
+# Ventilador
+  - platform: mqtt
+    name: "Ventilador"
+    state_topic: 'casa/cozinha/ventilador/status'
+    command_topic: 'casa/cozinha/ventilador/switch'
+    optimistic: false
+
+
+# luz central
+  - platform: mqtt_json
+    name: "Luz central"
+    state_topic: "home/rgb1"
+    command_topic: "home/rgb1/set"
+    brightness: true
+    rgb: true
+    optimistic: false
+    qos: 0
+
+#  - platform: mqtt_json
+#    name: teste esp8266
+#    state_topic: "home/rgb2"
+#    command_topic: "home/rgb2/set"
+#    brightness: true
+#    rgb: true
+#    optimistic: false
+#    qos: 0

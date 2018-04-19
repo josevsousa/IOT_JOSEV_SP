@@ -1,0 +1,7 @@
+name: Acender Luz central do quarto
+entities:
+    light.Luz_central:
+        state: on
+        transition: 2
+        brightness: 150
+        rgb_color: [255,255,255]

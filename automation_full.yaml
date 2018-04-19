@@ -1,0 +1,53 @@
+# - alias: "texto do extado inicial"
+# (trigger)    -> "gatilho"  -> "Quando Jose chega em casa"   
+# (condition)  -> "Condicao" -> "e e depois do por-do-sol"
+# (action)     -> "Acao"     -> "Acenda as luzes da sala"
+
+# ------------------------------------------------------------------
+
+
+
+# Desligar luz_central quando a luz_da_pia for desligada
+- alias: Desligar-LuzCentral-com-LuzDaPia
+  trigger:
+    entity_id: light.luz_da_pia
+    platform: state
+    from: 'on'
+    to: 'off'
+  action:
+    service: light.turn_off
+    entity_id: light.luz_central
+    data:
+      transition: 2
+
+# Ligar a luz_central quando a luz_da_pia for acesa
+- alias: Ligar-LuzCentral-com-LuzDaPia
+  trigger:
+    entity_id: light.luz_da_pia
+    platform: state
+    from: 'off'
+    to: 'on'
+  action:
+    service: light.turn_on
+    entity_id: light.luz_central
+    data:
+      transition: 2
+
+- alias: Desligar ventilador Mondeal
+  hide_entity: False
+  trigger:
+    platform: template
+    value_template: '{{ states.sensor.time.state == states.sensor.time_ventilador_time_long.state }}'
+  condition:
+    condition: state
+    entity_id: input_boolean.time_ventilador_status
+    state: 'on'
+  action:
+    service: script.ventilador_up
+
+
+
+
+
+
+          

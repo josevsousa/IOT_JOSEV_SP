@@ -1,0 +1,7 @@
+name: Spotify ligado
+entities:
+  light.Luz_central:
+    state: on
+    transition: 2
+    brightness: 55
+    rgb_color: [93,0,226]

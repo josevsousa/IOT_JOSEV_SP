@@ -1,0 +1,34 @@
+  - platform: time_date
+    display_options:
+      - 'time'
+  
+  - platform: darksky
+    api_key: '08307261ef930c0cbf4b086e4e0c16ac'
+    monitored_conditions:
+      - temperature
+      - humidity
+      # - precip_intensity
+  
+  - platform: template
+    sensors:
+      time_ventilador_hour:
+        value_template: '{{ states.input_slider.time_ventilador_hour.state | int }}'
+      time_ventilador_minute:
+        value_template: '{{ states.input_slider.time_ventilador_minute.state | int }}'
+      time_ventilador_time:
+        value_template: >-
+          {{ states.sensor.time_ventilador_hour.state }}:
+          {%- if states.sensor.time_ventilador_minute.state|length == 1 -%}
+            0
+          {%- endif -%}
+            {{ states.sensor.time_ventilador_minute.state }}
+      time_ventilador_time_long:
+        value_template: >-
+          {% if states.sensor.time_ventilador_hour.state|length == 1 -%}
+            0
+          {%- endif -%}
+            {{ states.sensor.time_ventilador_hour.state }}:
+          {%- if states.sensor.time_ventilador_minute.state|length == 1 -%}
+            0
+          {%- endif -%}
+            {{ states.sensor.time_ventilador_minute.state }}  

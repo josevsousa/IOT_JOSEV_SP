@@ -1,0 +1,51 @@
+
+
+Desligar_ventilador:
+  name: Ventilador da cozinha
+  entities:
+    - light.Ventilador
+    - sensor.time
+    - sensor.time_ventilador_time
+    - input_slider.time_ventilador_hour
+    - input_slider.time_ventilador_minute
+    - input_boolean.time_ventilador_status
+
+# Scenes:
+#   entities:
+#   - scene.Luz_central_normal
+#   - scene.Luz_central_spotify
+#   - scene.Antes_de_dormir
+
+
+Cozinha:
+  entities:
+  - light.Luz_da_pia
+
+Quarto:
+  light.Luz_central
+
+
+###### VIEWS ######
+    # default_view:
+    #   name: DEFAULT
+    #   icon: mdi:home
+    #   view: yes
+    #   entities:
+    #     - group.cozinha
+    #     - group.quarto
+Luzes_casa:
+  name: Luzes_casa
+  icon: mdi:lightbulb
+  view: yes
+  entities:
+    - group.Cozinha
+    - group.Quarto
+
+Ventiladores_casa:
+  name: Ventiladores_casa
+  icon: mdi:fan
+  view: yes
+  entities:
+    - group.Desligar_ventilador
+
+

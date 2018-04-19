@@ -1,0 +1,7 @@
+name: Antes de dormir
+entities:
+  light.Luz_central:
+    state: on
+    transition: 2
+    brightness: 45
+    rgb_color: [86,202,235]

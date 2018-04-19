@@ -1,0 +1,25 @@
+- name: Luz central normal
+  entities:
+      light.Luz_central:
+          state: on
+          transition: 2
+          brightness: 150
+          rgb_color: [255,255,255]
+
+- name: Luz central spotify
+  entities:
+      light.Luz_central:
+          state: on
+          transition: 2
+          brightness: 55
+          rgb_color: [93,0,226]
+
+- name: Antes de dormir
+  entities:
+      light.Luz_central:
+          state: on
+          transition: 2
+          brightness: 45
+          rgb_color: [86,202,235]
+
+

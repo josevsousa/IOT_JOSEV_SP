@@ -1,0 +1,27 @@
+############ Ventiladores ###########
+# Ventilador da cozinha
+  sensor.time:
+    hidden: false
+  sensor.time_ventilador_hour:
+    hidden: true
+  sensor.time_ventilador_minute:
+    hidden: true
+  sensor.time_ventilador_time_long:
+    hidden: true
+  sensor.time_ventilador_time:
+    friendly_name: 'Desligar em'
+    icon: mdi:timelapse
+  # Ventilador da cozinha 
+  input_slider.time_ventilador_hour:
+    friendly_name: 'Hora'
+    icon: mdi:timer
+  input_slider.time_ventilador_minute:
+    friendly_name: 'Minuto'
+    icon: mdi:timer
+  input_boolean.time_ventilador_status:
+    friendly_name: 'Automatico'
+    icon: mdi:power
+  light.Ventilador:
+    friendly_name: 'Ligar/Desligar'
+    icon: mdi:fan
+#--------------------------------------#

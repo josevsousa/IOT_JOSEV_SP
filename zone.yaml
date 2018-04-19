@@ -1,0 +1,19 @@
+- name: Home
+  latitude: -23.496368
+  longitude: -46.750344
+  radius: 100
+  icon: mdi:home
+
+- name: Bourbon
+  latitude: -23.5264066
+  longitude: -46.6831876
+  radius: 100
+  icon: mdi:gift
+
+- name: Jobs Fifa
+  latitude: -23.493433
+  longitude: -46.757051
+  radius: 100
+  icon: mdi:bank
+
+

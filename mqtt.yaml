@@ -1,0 +1,13 @@
+
+broker: 192.168.0.4
+port: 1883
+client_id: home-assistant-1
+username: raspberry
+password: ddd2000@
+
+# - alias: 'mqtt cloudMQTT'
+#   broker: m10.cloudmqtt.com
+#   port: 19605
+#   client_id: home-assistant-1
+#   username: ha
+#   password: 123homHOM!@#
